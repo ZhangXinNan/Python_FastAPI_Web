@@ -1,0 +1,16 @@
+<template>
+  <div >
+       <button v-click="text"></button>
+  </div>
+</template>
+
+<script>
+  export default {
+    props: {
+      content:'OK' 
+    },
+    methods: {
+      text() { return '<h3>返回：{{ content }}</h3>' }
+    }
+  }
+</script>

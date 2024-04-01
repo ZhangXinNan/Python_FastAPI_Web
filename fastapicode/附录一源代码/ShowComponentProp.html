@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 自定义组件</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+        <mytitle title=' 第一个调用内容：'></mytitle>
+       </br>
+        <mytitle title=' 第二个调用内容：'></mytitle>
+</div>
+
+<script>
+  Vue.component('mytitle', {   // 注册全局组件，mytitle为组件名
+     props: ['title'],                     //增加可调用的自定义属性
+     data: function () {
+         return {
+         count: 0
+    }},
+   template: '<h3>{{ title }}自定义组件，显示内容!{{ count }} </h3>'
+})
+
+new Vue({  // 创建Vue根实例
+  el: '#app'
+})
+</script>
+</body>
+</html>

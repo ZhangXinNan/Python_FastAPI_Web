@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 自定义组件</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+        <mytitle></mytitle>
+       </br>
+        <mytitle></mytitle>
+</div>
+
+<script>
+  Vue.component('mytitle', {   // 注册全局组件，mytitle为组件名
+     data: function () {
+         return {
+         count: 0
+    }},
+   template: '<h3>自定义组件，显示内容!{{ count }}</h3>'
+})
+
+new Vue({  // 创建Vue根实例
+  el: '#app'
+})
+</script>
+</body>
+</html>

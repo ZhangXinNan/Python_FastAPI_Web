@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 条件判断语句</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-if="see">看见三酷猫了！</p>
+     <h2 v-if="ok">TOM猫躲起来了</h2>
+</div>
+    
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    see: true,
+    ok: false 
+  }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 模板语法-表达式</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+	最简单的加法：{{count+9}}<br>
+	逻辑判断：{{ flag ? '真的' : '假的' }}<br>
+</div>
+	
+<script>
+new Vue({
+  el: '#app',
+  data: {
+               	flag: true,
+	count :1
+  }
+})
+</script>
+</body>
+</html>

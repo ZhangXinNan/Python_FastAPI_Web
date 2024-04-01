@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 模板语法-插值</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-bind:disabled="isShow">不能用（点击不会动）</button>
+    <button v-bind:disabled="noShow">能用（点击会动）</button>
+</div>
+	
+<script>
+new Vue({
+  el: '#app',
+  data: {
+      isShow: true,
+      noShow:falseShow
+  }
+})
+</script>
+</body>
+</html>

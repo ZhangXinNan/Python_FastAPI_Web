@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Routing Example App</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  </head>
+  <body>
+      <div id="app">
+      <ul>
+       <li>
+          <v-link href="/">Home</v-link>
+          <v-link href="/about">About</v-link>
+        </li>
+      </ul>
+  </div>
+    <script>
+        const NotFound = { template: '<p>Page not found</p>' }
+        const Home = { template: '<p>home page</p>' }
+        const About = { template: '<p>about page</p>' }
+       const routes = {
+               '/': Home,
+               '/about': About
+       }
+
+ new Vue({
+   el: '#app',
+   data: {
+     currentRoute:'/'        //window.location.pathname
+   },
+   computed: {
+     ViewComponent () {
+       return routes[this.currentRoute] || NotFound
+     }
+   },
+   render (h) { return h(this.ViewComponent) }
+ })
+   </script>
+  </body>
+</html>

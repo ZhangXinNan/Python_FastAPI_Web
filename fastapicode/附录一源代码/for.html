@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue模板语法-循环</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+   作者：{{ author }}
+  <ol>
+    <li v-for="book in books">
+      {{ book.name }}
+    </li>
+  </ol>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    author:'刘瑜',
+    books: [
+      { name: '《Python编程从零基础到项目实战》' },
+      { name: '《Python编程从数据分析到机器学习实践》' },
+      { name: '《算法之美——Python语言实现》' },
+      { name: '《NoSQL数据库入门与实践》' },
+      { name: '《战神——软件项目管理深度实战》' },
+    ]
+  }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue组件-局部组件</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+	<local></local>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  components: {
+    'local': {
+        template:'<h3>局部使用</h3>'
+}
+  }
+})
+</script>
+</body>
+</html>

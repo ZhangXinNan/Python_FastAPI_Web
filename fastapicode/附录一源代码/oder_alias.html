@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 模板语法-指令缩写</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    完整绑定属性指令：<a v-bind:href="add1">新浪1</a>
+    </br>
+   缩写绑定属性指令：<a :href="add1">新浪1</a>
+   完整的鼠标点击事件监听指令：<button v-on:click="counter += 1">加1</button>
+  </br>
+  缩写的鼠标点击事件监听指令：<button @click="counter += 1">加1</button>
+  点击响应次数： {{ counter }}
+</div>
+	
+<script>
+new Vue({
+  el: '#app',
+  data: {
+      add1:"https://www.sina.com.cn/",
+      counter :0
+  }
+})
+</script>
+</body>
+</html

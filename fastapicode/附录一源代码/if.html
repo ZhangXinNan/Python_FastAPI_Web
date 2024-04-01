@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue模板语法-if条件判断</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-if="flag===1">
+                 <h1>大号三酷猫！！！</h1>
+	</div>
+	<div v-else-if="flag===2">
+	 <h2>二号三酷猫！！！</h2>
+	</div>
+	<div v-else-if="flag===3">
+	 <h3>三号三酷猫！！！</h3>
+	</div>
+	<div v-else>
+	  <h4>小号三酷猫！！！</h4>
+	</div>
+</div>
+	
+<script>
+new Vue({
+  el: '#app',
+  data: {
+       flag: 4
+  }
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vue 模板语法-插值</title>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ msg }}</p>
+    <p v-html="msg_html"></p>
+</div>
+	
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    msg: '<h3>文本插值方式</h3>',
+    msg_html:'<h3>html插值方式</h3>'
+  }
+})
+</script>
+</body>
+</html>
