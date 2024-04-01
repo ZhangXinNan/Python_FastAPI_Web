@@ -2,4 +2,7 @@
 .vscode/
 .idea/
 .DS_Store
+__MACOSX/
+__pycache__/
+.pytest_cache/
 

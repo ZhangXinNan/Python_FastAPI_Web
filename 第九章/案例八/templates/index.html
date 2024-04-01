@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>三酷猫</title>
+</head>
+<body>
+    <h1>你好: {{ name }}</h1>
+<table border="1">
+     <tr>
+           <td>序号</td>
+           <td>商品名称 </td>
+           <td>数量</td>
+           <td>单位</td>
+           <td>价格 </td>
+     </tr>
+       {%for one in goods %}{#按照字典值进行排序#}
+      <tr>
+           <td>{{one.id}} </td>
+           <td>{{one.name}} </td>
+           <td>{{one.num}} </td>
+           <td>{{one.unit}} </td>
+           <td>{{one.price}} </td>
+      </tr>
+       {%endfor%}
+
+</table>
+</body>
+</html>
