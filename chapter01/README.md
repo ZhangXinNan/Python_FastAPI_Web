@@ -101,18 +101,70 @@ http://127.0.0.1:8000/redoc
 
 ## 1.4 FastAPI框架构成 16
 ### 1.4.1 FastAPI框架功能 16
+FastAPI以Starlette作为Web服务器的底层，提供了异步技术接收客户端发起的请求数据。
+
+通过高性能的数据模型框架Pydantic库对数据进行验证和转换。
+
 ### 1.4.2 Python类型提示 17
+
+#### 1. 使用方式
+```
+变量:类型[=值]
+```
+
 - 示例1_2
 - 示例1_3
+
+#### 2. 基础数据类型
+- 基础数据类型
+  - int
+  - float
+  - str
+  - bool
+  - bytes
+
+#### 3. 泛型
+- List
+  - `from typing import List`
+- Tuple / Set
+  - `from typing import Tuple, Set`
+- Dict
+  - `from typing import Dict`
+- Optional
+  - `from typing import Optional`
+
 - 示例1_4
 - 示例1_5
 - 示例1_6
 - 示例1_7
+
+#### 4. 自定义类型
 - 示例1_8
 
 ### 1.4.3 Pydantic框架 21
 - 示例1_9
 - 示例1_10
+
+#### 1. 模型基本用法
+#### 2. 数据模型测试
+#### 3. 常用的模型属性和方法
+- dict()
+- json()
+- copy()
+- parse_obj()
+- parse_raw()
+- parse_file()
+- from_orm()
+- schema()
+- schema_json()
+- construct()
+- `__field_set__`
+- `__fields__`
+- `__config__`
+
+
+#### 4. 嵌套模型
+#### 5. 字段
 
 ### 1.4.4 Starlette框架 24
 - 示例1_11
